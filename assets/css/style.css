@@ -1,0 +1,22 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f6f6f6; 
+}
+
+.item-login {
+	margin-bottom: -10px;
+}
+
+.form-login {
+	background-color: #fff;
+	margin-top: 50%;
+	border-radius: 0.25rem;
+	padding-left: 13px;
+	padding-right: 13px;
+	border-top: 0.25rem solid #26a69a;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
