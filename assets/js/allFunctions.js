@@ -7,7 +7,7 @@ $('#login-page').submit(function(){
 	}else {
 		if((login === "Admin" || login === "admin" || login === "ADMIN") && password === "123123"){
 			sessionStorage.setItem('user', login);
-			window.location.href = "dashboard/cadastrar-produto.html";
+			window.location.href = "dashboard/home.html";
 		}else {
 			$('#login-erro').val(Materialize.toast('Login ou senha incorretos.', 1500, 'rounded deep-orange accent-2'));
 		}
@@ -15,7 +15,7 @@ $('#login-page').submit(function(){
 	return false;
 });
 
-function sair(){
+function logout(){
 	sessionStorage.removeItem("user");
 	window.location.href = '../index.html';
 }

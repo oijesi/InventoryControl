@@ -28,12 +28,14 @@
 
   <!--Menu mobile-->
   <ul id="menu-mobile" class="side-nav">
-    <li><a href="#" onClick="sair()" data-activates="" data-beloworigin="true" class="">Sair<i class="material-icons right">input</i></a></li>
+    <li><a href="../dashboard/home.html" data-activates="false" data-beloworigin="true" class="flow-text">Home<i class="material-icons right">home</i></a></li>
+    <li><a href="../dashboard/cadastrar-produto.html" data-activates="true" data-beloworigin="true" class="flow-text">Cadastrar Produto<i class="material-icons right">add_shopping_cart</i></a></li>
+    <li><a href="#" onClick="logout()" data-activates="false" data-beloworigin="true" class="flow-text">Sair<i class="material-icons right">input</i></a></li>
   </ul>
 
   <main>
     <div class="container" id="cadastra-produto-page">
-      <form class="form-produto" id="form-produto">
+      <form class="form-produto white" id="form-produto">
         <content id=txtHead>
           <h5>Cadastro de produto</h5>
         </content>
@@ -69,9 +71,9 @@
     <script type="text/javascript" src="../assets/materialize/js/materialize.js"></script>
     <script type="text/javascript" src="../assets/js/allFunctions.js"></script>
     <script>
-        $(document).ready(function(){
+        $(function(){
           $('.button-collapse').sideNav();
-          $(".dropdown-button").dropdown();
+          $('.dropdown-button').dropdown();
           $('#valor-produto').maskMoney();
         });
       </script>
