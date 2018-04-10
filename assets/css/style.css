@@ -7,16 +7,33 @@ body {
 	background-color: #f6f6f6; 
 }
 
-.item-login {
-	margin-bottom: -10px;
-}
+.input-field input:focus + label {
+   color: #ff6e40 !important;
+ }
+
+.input-field  .prefix.active {
+  color: #ff6e40;
+} 
+
+ .row .input-field input:focus {
+  border-bottom: 1px solid #ff6e40 !important;
+ }
+
+ input[type=text]:not(browser-default):focus:not([readonly]),
+ input[type=password]:not(browser-default):focus:not([readonly]) {
+  box-shadow: 0 1px 0 0 #ff6e40 !important;
+ }
 
 .form-login {
-	background-color: #fff;
 	margin-top: 50%;
 	border-radius: 0.25rem;
 	padding-left: 13px;
 	padding-right: 13px;
-	border-top: 0.25rem solid #26a69a;
+	border-top: 0.25rem solid #ff6e40;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.toast {
+	position: fixed !important;
+    top: 85% !important;
 }

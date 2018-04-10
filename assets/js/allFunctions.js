@@ -2,13 +2,14 @@ $('#login-page').submit(function(){
 	var login = $('#login').val();
 	var password = $('#password').val();
 	if(login === "" || password === ""){
-		alert('Preencha os campos!');
+		$('#login-erro').val(Materialize.toast('Nenhum campo pode estar vazio.', 1500, 'rounded deep-orange accent-2'));
 		return false;
 	}else {
 		if((login === "Admin" || login === "admin" || login === "ADMIN") && password === "123123"){
+			sessionStorage.setItem('user', login);
 			window.location.href = "dashboard/cadastrar-produto.html";
 		}else {
-			alert("Login ou senha errados");
+			$('#login-erro').val(Materialize.toast('Login ou senha incorretos.', 1500, 'rounded deep-orange accent-2'));
 		}
 	}
 	return false;

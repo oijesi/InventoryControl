@@ -3,47 +3,46 @@
 <head>
 	<meta charset="utf-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="assets/materialize/css/materialize.css"  media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
 		<div class="container" id="login-page">
-
-			<form class="form-login" id="form-login" class="white">
-				<content id=txtHead>
-					<h5>Bem vindo!</h5>
-					<p>Faça login para continuar</p>
-				</content>
-				<div class="row">
-	              <div class="col s12 m8 offset-m2">
-	              	<div class="row margin">
-                        <div class="input-field col s12">
-                          <i class="large material-icons prefix">perm_identity</i>
-                          <input id="login" type="text">
-                          <label for="login" class="center-align">Login</label>
-                        </div>
-                    </div>
-                    <div class="row margin">
-                        <div class="input-field col s12">
-                          <i class="large material-icons prefix">lock_outline</i>
-                          <input id="password" type="password">
-                          <label for="password">Senha</label>
-                        </div>
-                    </div>
-                    <div class="row margin">
-                        <div class="input-field col s12">
-                          <button class="waves-effect waves-light btn">Entrar</button>
-                        </div>
-                    </div>
-	            </div>
-	        </form>
-
+  			<form class="form-login white" id="form-login">
+  				<content id=txtHead>
+  					<h5>Bem vindo!</h5>
+  					<p>Faça login para continuar</p>
+  				</content>
+  				<div class="row">
+            <div class="col s12 m8 offset-m2">
+              <div id="login-erro"></div>
+            	<div class="row margin">
+                <div class="input-field col s12">
+                  <i class="large material-icons prefix">perm_identity</i>
+                  <input id="login" type="text">
+                  <label for="login" class="center-align">Login</label>
+                </div>
+              </div>
+              <div class="row margin">
+                <div class="input-field col s12">
+                  <i class="large material-icons prefix">lock_outline</i>
+                  <input id="password" type="password">
+                  <label for="password">Senha</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <button id="btn-login" class="btn waves-effect waves-light col s12 deep-orange accent-2">Entrar</button>
+                </div>
+              </div>
+        </form>
+      </div>
 		</div>
 
 	
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="assets/materialize/js/materialize.js"></script>
     <script type="text/javascript" src="assets/js/allFunctions.js"></script>
 </body>
 </html>
