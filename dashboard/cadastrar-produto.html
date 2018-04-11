@@ -13,22 +13,13 @@
     <nav class="deep-orange accent-2">
       <div class="nav-wrapper">
         <a href="home.html" class="brand-logo center">iControl</a>
-
         <a href="#" data-activates="menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li><a href="collapsible.html">JavaScript</a></li>
-        </ul>
-
       </div>
     </nav>
   </div>
 
   <!--Menu mobile-->
   <ul id="menu-mobile" class="side-nav">
-    <li><a href="../dashboard/home.html" data-activates="false" data-beloworigin="true" class="flow-text">Home<i class="material-icons right">home</i></a></li>
     <li><a href="../dashboard/cadastrar-produto.html" data-activates="true" data-beloworigin="true" class="flow-text">Cadastrar Produto<i class="material-icons right">add_shopping_cart</i></a></li>
     <li><a href="#" onClick="logout()" data-activates="false" data-beloworigin="true" class="flow-text">Sair<i class="material-icons right">input</i></a></li>
   </ul>
@@ -36,12 +27,13 @@
   <main>
     <div class="container" id="cadastra-produto-page">
       <form class="form-produto white" id="form-produto">
-        <content id=txtHead>
-          <h5>Cadastro de produto</h5>
-        </content>
-        <div class="row">
+          <content id=txtHead>
+            <h5>Cadastro de produto</h5>
+          </content>
+          <div class="row">
                 <div class="col s12 m8 offset-m2">
-                  <div class="row margin">
+                  <div id="produto-erro"></div>
+                    <div class="row margin">
                         <div class="input-field col s12">
                           <i class="large material-icons prefix">control_point_duplicate</i>
                           <input id="produto" type="text">
@@ -49,33 +41,38 @@
                         </div>
                     </div>
                     <div class="row margin">
-                        <div class="input-field col s12">
-                          <i class="large material-icons prefix">attach_money</i>
-                          <input id="valor-produto" type="text">
-                          <label for="valor-produto">Valor</label>
-                        </div>
+                      <div class="input-field col s6">
+                        <i class="large material-icons prefix">attach_money</i>
+                        <input id="valor-produto" type="text">
+                        <label for="valor-produto">Valor</label>
+                      </div>
+                    </div>
+                    <div class="row margin">
+                      <div class="input-field col s6">
+                        <i class="large material-icons prefix">show_chart</i>
+                        <input id="qtd-produto" type="number" value="">
+                        <label for="qtd-produto">Quantidade</label>
+                      </div>
                     </div>
                     <div class="row margin">
                         <div class="input-field col s12">
                           <button id="btn-cadastro" class="btn waves-effect waves-light col s12 deep-orange accent-2">Cadastrar</button>
                         </div>
                     </div>
-              </div>
-          </form>
-
-    </div>
+                </div>
+        </form>
+      </div>
   </main>
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../assets/js/jquery.maskMoney.js"></script>
-    <script type="text/javascript" src="../assets/materialize/js/materialize.js"></script>
-    <script type="text/javascript" src="../assets/js/allFunctions.js"></script>
-    <script>
-        $(function(){
-          $('.button-collapse').sideNav();
-          $('.dropdown-button').dropdown();
-          $('#valor-produto').maskMoney();
-        });
-      </script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../assets/js/jquery.maskMoney.js"></script>
+  <script type="text/javascript" src="../assets/materialize/js/materialize.js"></script>
+  <script type="text/javascript" src="../assets/js/allFunctions.js"></script>
+  <script>
+      $(function(){
+        $('.button-collapse').sideNav();
+        $('.dropdown-button').dropdown();
+        $('#valor-produto').maskMoney();
+      });
+  </script>
 </body>
 </html>

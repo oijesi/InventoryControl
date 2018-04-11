@@ -20,7 +20,8 @@ body {
  }
 
  input[type=text]:not(browser-default):focus:not([readonly]),
- input[type=password]:not(browser-default):focus:not([readonly]) {
+ input[type=password]:not(browser-default):focus:not([readonly]),
+ input[type=number]:not(browser-default):focus:not([readonly]) {
   box-shadow: 0 1px 0 0 #ff6e40 !important;
  }
 
