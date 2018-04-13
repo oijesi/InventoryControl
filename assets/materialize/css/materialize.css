@@ -3384,8 +3384,8 @@ nav ul a span.badge {
 }
 
 .container .row {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+   margin-left: -0.75rem; 
+   margin-right: -0.75rem; 
 }
 
 .section {
@@ -3406,9 +3406,9 @@ nav ul a span.badge {
 }
 
 .row {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+  /* margin-left: auto; */ /*********************** EDITADO ***********************/
+  /* margin-right: auto; */
+  /* margin-bottom: 20px; */
 }
 
 .row:after {

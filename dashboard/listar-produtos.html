@@ -21,20 +21,20 @@
   <!--Menu mobile-->
   <ul id="menu-mobile" class="side-nav">
     <li><a href="../dashboard/cadastrar-produto.html" data-activates="false" data-beloworigin="true" class="flow-text">Cadastrar Produto<i class="material-icons right">add_shopping_cart</i></a></li>
-	<li><a href="../dashboard/lista-produtos.html" data-activates="true" data-beloworigin="true" class="flow-text">Produtos<i class="material-icons right">local_grocery_store</i></a></li>
+	<li><a href="../dashboard/editar-produto.html" data-activates="true" data-beloworigin="true" class="flow-text">Editar Produto<i class="material-icons right">edit</i></a></li>
+	<li><a href="../dashboard/listar-produtos.html" data-activates="true" data-beloworigin="true" class="flow-text">Listar Produtos<i class="material-icons right">local_grocery_store</i></a></li>
     <li><a href="#" onClick="logout()" data-activates="false" data-beloworigin="true" class="flow-text">Sair<i class="material-icons right">input</i></a></li>
   </ul>
 
   <main>
     <div class="container" id="lista-produtos-page">
-		<content id=txtHead>
+		<content class="txt-head">
 			<h5 class="center-align">Lista de produtos</h5>
 		</content>
-		<div class="row">
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-content">
-              <h6 id="resultado-vazio-produtos"></h6>
+		<div class="col s12 m6">
+            <div class="lista-produtos card">
+              <div class="card-content">
+                <h6 id="resultado-vazio-produtos"></h6>
               <table class="centered highlight" id="tabela-produtos">
                 <thead>
                   <tr>
@@ -46,10 +46,9 @@
                 <tbody>
                 </tbody>
               </table>
+              </div>
             </div>
-          </div>
         </div>
-      </div>
 		
     </div>
   </main>

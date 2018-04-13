@@ -61,7 +61,7 @@ function salvaProduto(data){
 }
 
 function montaListaProdutos(){
-	var produtos = retornaProdutoLocalStorage();
+	var produtos = retornaProdutosLocalStorage();
 	
 	if(produtos === null){
 		$('#tabela-produtos').hide();
@@ -71,7 +71,7 @@ function montaListaProdutos(){
 			$('#tabela-produtos tbody').append(
 				'<tr>'+
 				'	<td>' + produtos[i].nomeProd  + '</td>'+
-				'	<td>' + produtos[i].valorProd  + '</td>'+
+				'	<td>' + produtos[i].valorProd + '</td>'+
 				'	<td>' + produtos[i].qtdProd  + '</td>'+
 				'	<td>'+
 				'</tr>'
@@ -92,7 +92,7 @@ function listaProdutos(){
 	}
 }
 
-function retornaProdutoLocalStorage(){
+function retornaProdutosLocalStorage(){
 	return JSON.parse(localStorage.getItem('produtos'));
 }
 
@@ -106,4 +106,10 @@ function getDataAtual(){
 function logout(){
 	sessionStorage.removeItem("user");
 	window.location.href = '../index.html';
+}
+
+function numberToReal(numero) {
+    var numero = numero.toFixed(2).split('.');
+    numero[0] = "R$ " + numero[0].split(/(?=(?:...)*$)/).join('.');
+    return numero.join(',');
 }

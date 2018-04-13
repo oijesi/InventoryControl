@@ -27,17 +27,17 @@
   </ul>
 
   <main>
-	<div class="row">
+    <div class="row">
 		<content class="txt-head">
-			<h5 class="center-align">Cadastrar produto</h5>
+			<h5 class="center-align">Editar produto</h5>
 		</content>
         <div class="col s12 m6">
-            <div class="cadastra-produto card">
-				<div class="card-content">
-					<div class="row">
-					<div id="msg-erro-produto"></div>
-					<form class="col s12" id="form-produto">
-						<div class="row">
+            <div class="edita-produto card">
+              <div class="card-content">
+                <div class="row">
+                  <div id="msg-erro-edit-produto"></div>
+                  <form class="col s12" id="edit-produto">
+                    	<div class="row">
 						  <div class="input-field col s12">
 							<input id="produto" type="text">
 							<label for="produto" class="center-align">Nome</label>
@@ -54,27 +54,38 @@
 							<input id="qtd-produto" type="number" value="">
 							<label for="qtd-produto">Quantidade</label>
 						  </div>
-						</div>
+						</div>	
 						<input type="hidden" id="id-param-edita-produto">
-						<button type="submit" class="btn-floating btn-large waves-effect deep-orange accent-2 right"><i class="material-icons">add</i></button>
+						<button type="submit" class="btn-floating btn-large waves-effect deep-orange accent-2 right"><i class="material-icons">edit</i></button>
                   </form>
                 </div>
               </div>
             </div>
         </div>
     </div>
-	
   </main>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="../assets/js/jquery.maskMoney.js"></script>
-  <script type="text/javascript" src="../assets/materialize/js/materialize.js"></script>
-  <script type="text/javascript" src="../assets/js/allFunctions.js"></script>
-  <script>
-      $(function(){
-        $('.button-collapse').sideNav();
-        $('.dropdown-button').dropdown();
-        $('#valor-produto').maskMoney();
-      });
-  </script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.maskMoney.js"></script>
+    <script type="text/javascript" src="../assets/materialize/js/materialize.js"></script>
+    <script type="text/javascript" src="../assets/js/allFunctions.js"></script>
+    <script>
+        $(function(){
+          $('.button-collapse').sideNav();
+          $('.dropdown-button').dropdown();
+		  $("#valor-produto").maskMoney();
+		  
+          var paramGet = retornaParamId();
+          var produtosCadastrados = retornaProdutosLocalStorage();
+          for(var i = 0; i < produtosCadastrados.length; i++){
+            if(produtosCadastrados[i].idProduto == paramGet){
+              $('#nome-edita-produto').val(produtosCadastrados[i].nomeProduto);
+              $('#valor-edita-produto').val(produtosCadastrados[i].valorProduto);
+              $('#id-param-edita-produto').val(produtosCadastrados[i].idProduto);
+            }
+          }
+		  
+        });
+      </script>
 </body>
 </html>
