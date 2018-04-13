@@ -12,7 +12,7 @@
   <div class="navbar-fixed">
     <nav class="deep-orange accent-2">
       <div class="nav-wrapper">
-        <a href="home.html" class="brand-logo center">iControl</a>
+        <a href="cadastrar-produto.html" class="brand-logo center">iControl</a>
         <a href="#" data-activates="menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
     </nav>
@@ -20,27 +20,37 @@
 
   <!--Menu mobile-->
   <ul id="menu-mobile" class="side-nav">
-    <li><a href="../dashboard/home.html" data-activates="true" data-beloworigin="true" class="">Home<i class="material-icons right">home</i></a></li>
-    <li><a href="../dashboard/cadastrar-produto.html" data-activates="false" data-beloworigin="true" class="">Cadastrar Produto<i class="material-icons right">add_shopping_cart</i></a></li>
-    <li><a href="#" onClick="logout()" data-activates="false" data-beloworigin="true" class="">Sair<i class="material-icons right">input</i></a></li> 
+    <li><a href="../dashboard/cadastrar-produto.html" data-activates="false" data-beloworigin="true" class="flow-text">Cadastrar Produto<i class="material-icons right">add_shopping_cart</i></a></li>
+	<li><a href="../dashboard/lista-produtos.html" data-activates="true" data-beloworigin="true" class="flow-text">Produtos<i class="material-icons right">local_grocery_store</i></a></li>
+    <li><a href="#" onClick="logout()" data-activates="false" data-beloworigin="true" class="flow-text">Sair<i class="material-icons right">input</i></a></li>
   </ul>
 
   <main>
-    <div class="container" id="home-page">
-      <content id=txtHead>
-        <h5>Home</h5>
-        <p>Escolha o que você deseja fazer</p>
-      </content>
-      <div class="row">
-        <div class="col s12 m8 offset-m2">
-          <div class="row margin">
-              <div class="collection">
-                <a href="../dashboard/cadastrar-produto.html" class="collection-item">Cadastrar Produto</a>
-                <a href="#!" class="collection-item">Teste</a>
-              </div>
+    <div class="container" id="lista-produtos-page">
+		<content id=txtHead>
+			<h5 class="center-align">Lista de produtos</h5>
+		</content>
+		<div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <h6 id="resultado-vazio-produtos"></h6>
+              <table class="centered highlight" id="tabela-produtos">
+                <thead>
+                  <tr>
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Quantidade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
+		
     </div>
   </main>
 
@@ -52,6 +62,7 @@
         $(function(){
           $('.button-collapse').sideNav();
           $('.dropdown-button').dropdown();
+		  montaListaProdutos();
         });
       </script>
 </body>
