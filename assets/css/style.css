@@ -27,7 +27,7 @@ body {
 
 .toast {
 	position: fixed !important;
-    top: 85% !important;
+    top: 35% !important;
 }
 
 .collection a.collection-item {
