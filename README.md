@@ -1,1 +1,1 @@
-# Inventory-Control
+# InventoryControl
